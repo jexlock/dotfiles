@@ -1,4 +1,3 @@
-
 local indent = 2
 
 vim.o.formatoptions = "jcroqlnt"
@@ -43,4 +42,4 @@ vim.opt.wildmode = "longest:full,full"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })

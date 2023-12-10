@@ -1,3 +1,4 @@
+--- Install lazy.nvim
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -14,11 +15,11 @@ vim.opt.rtp:prepend(lazypath)
 -- Configure lazy.nvim
 require("lazy").setup("plugins", {
   defaults = { lazy = true, version = nil },
-  install = { missing = true, colorscheme = { "everforest", "tokyonight" } },
-  checked = { enabled = true },
+  install = { missing = true, colorscheme = { "tokyonight", "gruvbox" } },
+  checker = { enabled = true },
   performance = {
     rtp = {
-      diabled_plugins = {
+      disabled_plugins = {
         "gzip",
         "matchit",
         "matchparen",
