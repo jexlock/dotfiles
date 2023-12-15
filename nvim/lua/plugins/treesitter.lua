@@ -39,6 +39,8 @@ return {
           "vim",
           "yaml",
         },
+        sync_install = true,
+        auto_install = true,
         highlight = { enable = true },
         indent = { enable = true, disable = { "python" } },
         incremental_selection = {

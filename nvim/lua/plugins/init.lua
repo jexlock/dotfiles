@@ -8,8 +8,8 @@ return {
 	{ "nacro90/numb.nvim", event = "BufReadPre", config = true },
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		event = "BufReadPre",
-		config = true,
+		main = "ibl",
+		opts = {},
 	},
 	{
 		"stevearc/dressing.nvim",
@@ -36,16 +36,5 @@ return {
 		keys = {
 			{ "<leader>gs", "<cmd>Neogit kind=floating<cr>", desc = "Status" },
 		},
-	},
-	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = false,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("nvim-tree").setup({})
-		end,
 	},
 }
