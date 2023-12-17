@@ -1,14 +1,19 @@
 local keymap = vim.keymap.set
 
--- Remap for dealing with word wrap
-keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
-keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+-- Move blocks of code up and down vscode style
+keymap("v", "J", ":m '>+1<CR>gv=gv")
+keymap("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Better viewing
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 keymap("n", "g,", "g,zvzz")
 keymap("n", "g;", "g;zvzz")
+
+-- Keep cursor on same line while wrapping following lines
+keymap("n", "J", "mzJ`z")
 
 -- Better escape using jk in insert and terminal mode
 keymap("i", "jk", "<ESC>")
@@ -29,11 +34,3 @@ keymap("v", ">", ">gv")
 
 -- Paste over currently selected text without yanking it
 keymap("v", "p", '"_dP')
-
--- Move Lines
-keymap("n", "<S-j>", ":m .+1<CR>==")
-keymap("v", "<S-j>", ":m '>+1<CR>gv=gv")
-keymap("i", "<S-j>", "<Esc>:m .+1<CR>==gi")
-keymap("n", "<S-k>", ":m .-2<CR>==")
-keymap("v", "<S-k>", ":m '<-2<CR>gv=gv")
-keymap("i", "<S-k>", "<Esc>:m .-2<CR>==gi")

@@ -2,6 +2,17 @@ return {
 	"nvim-lua/plenary.nvim",
 	"MunifTanjim/nui.nvim",
 	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"saadparwaiz1/cmp_luasnip",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"windwp/nvim-autopairs",
+		},
+	},
+	{
 		"nvim-tree/nvim-web-devicons",
 		config = { default = true },
 	},
@@ -36,5 +47,8 @@ return {
 		keys = {
 			{ "<leader>gs", "<cmd>Neogit kind=floating<cr>", desc = "Status" },
 		},
+	},
+	{
+		"lewis6991/gitsigns.nvim",
 	},
 }
