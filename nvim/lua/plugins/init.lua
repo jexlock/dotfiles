@@ -50,5 +50,11 @@ return {
 	},
 	{
 		"lewis6991/gitsigns.nvim",
+		require("gitsigns").setup(),
+	},
+	{
+		"numToStr/Comment.nvim",
+		opts = {},
+		lazy = false,
 	},
 }
