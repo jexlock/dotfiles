@@ -13,6 +13,10 @@ return {
 		},
 	},
 	{
+		"mbbill/undotree",
+		keys = { { "<leader>u", "<CMD>UndotreeToggle<CR>" } },
+	},
+	{
 		"nvim-tree/nvim-web-devicons",
 		config = { default = true },
 	},
@@ -45,7 +49,7 @@ return {
 			integrations = { diffview = true },
 		},
 		keys = {
-			{ "<leader>gs", "<cmd>Neogit kind=floating<cr>", desc = "Status" },
+			{ "<leader>gs", "<cmd>Neogit <cr>", desc = "Status" },
 		},
 	},
 	{

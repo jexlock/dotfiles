@@ -12,9 +12,6 @@ keymap("n", "N", "Nzzzv")
 keymap("n", "g,", "g,zvzz")
 keymap("n", "g;", "g;zvzz")
 
--- Keep cursor on same line while wrapping following lines
-keymap("n", "J", "mzJ`z")
-
 -- Better escape using jk in insert and terminal mode
 keymap("i", "jk", "<ESC>")
 keymap("t", "jk", "<C-\\><C-n>")
@@ -34,3 +31,4 @@ keymap("v", ">", ">gv")
 
 -- Paste over currently selected text without yanking it
 keymap("v", "p", '"_dP')
+keymap("n", "<leader>z", "<cmd>:Lazy<cr>", { desc = "Plugin Manager" })

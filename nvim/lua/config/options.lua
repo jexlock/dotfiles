@@ -1,10 +1,11 @@
 local indent = 2
 
-vim.o.formatoptions = "jcroqlnt"
+vim.opt.compatible = false
+vim.o.formatoptions = "jcroqln"
 vim.o.shortmess = "filnxtToOFWIcC"
 vim.opt.breakindent = true
 vim.opt.cmdheight = 0
-vim.opt.completeopt = "menuone,noselect"
+vim.opt.completeopt = "menuone,noselect,preview"
 vim.opt.conceallevel = 3
 vim.opt.confirm = true
 vim.opt.cursorline = true
@@ -39,7 +40,7 @@ vim.opt.timeoutlen = 300
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 vim.opt.wildmode = "longest:full,full"
+vim.opt.termguicolors = true
 
 vim.g.mapleader = " "
-vim.g.maplocalleader = ","
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
